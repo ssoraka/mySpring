@@ -22,7 +22,7 @@ public class Context {
         BeansCreator beansCreator = new BeansCreator();
         try {
             beans = beansCreator.getBeansFromXml(xmlPath);
-        } catch (Exception | InvalidConfigurationException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return;
         }
@@ -30,7 +30,7 @@ public class Context {
         //создаем бины
         try {
             instantiateBeans();
-        } catch (Exception | InvalidConfigurationException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return;
         }
